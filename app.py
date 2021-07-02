@@ -1,10 +1,10 @@
-from flask import Flask, render_template, url_for, request, redirect
-from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime as dt
 
+from flask import Flask, render_template, request, redirect
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'        # ///  ---> relative paths; //// ---> absolute paths
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'  # ///  ---> relative paths; //// ---> absolute paths
 db = SQLAlchemy(app)
 
 
