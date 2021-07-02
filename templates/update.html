@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>todo list</title>
+{% endblock %}
+
+{% block body %}
+<div class="intro">
+    <h1 class="main-heading">Update</h1>
+</div>
+
+<div class="update">
+
+    <form action="/update/{{ task.id }}" method="POST">
+        <input type="text" value="{{ task.content }}" name="content" id="content">
+        <input type="datetime-local" value="{{ task.deadline }}" name="deadline" id="deadline">
+        <button type="submit">Submit</button>
+    </form>
+
+</div>
+
+<div class="footer">
+
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>todo list</title>
+{% endblock %}
+
+{% block body %}
+<div class="intro">
+    <h1 class="main-heading">Task Master</h1>
+</div>
+
+<div class="todo">
+    <table border="1">
+        <tr>
+            <th>Task</th>
+            <th>Added</th>
+            <th>Deadline</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.content }}</td>
+                <td>{{ task.created }}</td>
+                <td>{{ task.deadline }}</td>
+                <td>
+                    <a href="">Completed</a>
+                    <a href="/delete/{{ task.id }}">Delete</a>
+                    <a href="/update/{{ task.id }}">Update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <form action="/" method="POST">
+        <input type="text" placeholder="Enter New Task" name="content" id="content">
+        <input type="datetime-local" name="deadline" id="deadline">
+        <button type="submit">Submit</button>
+    </form>
+
+</div>
+
+<div class="footer">
+
+</div>
+{% endblock %}
