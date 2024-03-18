@@ -4,4 +4,4 @@
 witxh your daily schedules</h4>
 <hr>
 
-Developed by [Pranav Singh](https://www.twitter.com/thebeginer86)
+Developed by [Pranav Singh](https://www.twitter.com/thebeginner86)
